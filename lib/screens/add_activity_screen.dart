@@ -1,8 +1,8 @@
-import 'package:activity_tracker_app/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
+
+// Utils
+import 'package:activity_tracker_app/utils/app_styles.dart';
 
 class AddActivityScreen extends StatelessWidget {
   const AddActivityScreen({super.key});
