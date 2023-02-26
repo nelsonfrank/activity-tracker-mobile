@@ -1,6 +1,7 @@
 import 'package:activity_tracker_app/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Activities",
-          style: Styles.headingLineStyle2,
+          style: Styles.headingLineStyle2.copyWith(color: Colors.white70),
         ),
         backgroundColor: Styles.orangeColor,
       ),
@@ -22,6 +23,7 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 15),
           children: [
             ListTile(
+                onTap: () => context.go('/activity/123'),
               leading: const Icon(Icons.car_rental),
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,49 +43,14 @@ class HomeScreen extends StatelessWidget {
               ),
               trailing: const Icon(Icons.more_vert),
             ),
-            ListTile(
-              leading: const Icon(Icons.sports_golf),
-              title: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Golf",
-                    style:
-                        Styles.headingLineStyle3.copyWith(color: Colors.black),
-                  ),
-                  const Gap(5),
-                  Text(
-                    "Connect with business people",
-                    style:
-                        Styles.textStyle.copyWith(color: Colors.grey.shade500),
-                  ),
-                ],
-              ),
-              trailing: const Icon(Icons.more_vert),
-            ),
-            ListTile(
-              leading: const Icon(Icons.directions_run),
-              title: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Run",
-                    style:
-                        Styles.headingLineStyle3.copyWith(color: Colors.black),
-                  ),
-                  const Gap(5),
-                  Text(
-                    "In-door running",
-                    style:
-                        Styles.textStyle.copyWith(color: Colors.grey.shade500),
-                  ),
-                ],
-              ),
-              trailing: const Icon(Icons.more_vert),
-            )
-          ],
-        ),
+            ]),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.go('/add-activity'),
+        tooltip: 'Increment',
+        backgroundColor: Styles.orangeColor,
+        child: const Icon(Icons.add),
+      ), 
     );
   }
 }
