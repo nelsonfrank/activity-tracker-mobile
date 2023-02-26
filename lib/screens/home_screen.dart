@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Styles.orangeColor,
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 15),
           children: [
@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              trailing: const Icon(Icons.arrow_forward_ios),
+              trailing: const Icon(Icons.more_vert),
             ),
             ListTile(
               leading: const Icon(Icons.sports_golf),
@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              trailing: const Icon(Icons.arrow_forward_ios),
+              trailing: const Icon(Icons.more_vert),
             ),
             ListTile(
               leading: const Icon(Icons.directions_run),
@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              trailing: const Icon(Icons.arrow_forward_ios),
+              trailing: const Icon(Icons.more_vert),
             )
           ],
         ),
